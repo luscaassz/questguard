@@ -1,0 +1,54 @@
+{
+  "quest_id": "batch_01_quest_001",
+  "title": "O mapa sob as cinzas",
+  "summary": "Bran solicita ajuda para recuperar um mapa antigo guardado nas ruínas próximas à vila.",
+  "quest_type": "exploration",
+  "giver_npc": "npc_ferreiro_bran",
+  "start_location": "loc_forja",
+  "objectives": [
+    {
+      "step_id": "step_001",
+      "depends_on": [],
+      "action": "talk",
+      "target": "npc_ferreiro_bran",
+      "success_condition": "O diálogo inicial com Bran é concluído."
+    },
+    {
+      "step_id": "step_002",
+      "depends_on": ["step_001"],
+      "action": "visit",
+      "target": "loc_ruinas",
+      "success_condition": "O jogador entra na área das ruínas antigas."
+    },
+    {
+      "step_id": "step_003",
+      "depends_on": ["step_002"],
+      "action": "collect",
+      "target": "item_mapa_antigo",
+      "success_condition": "O mapa antigo é adicionado ao inventário."
+    },
+    {
+      "step_id": "step_004",
+      "depends_on": ["step_003"],
+      "action": "return",
+      "target": "npc_ferreiro_bran",
+      "success_condition": "O jogador entrega o mapa antigo para Bran."
+    }
+  ],
+  "preconditions": [
+    "quest_o_primeiro_lingote está concluída"
+  ],
+  "completion_conditions": [
+    "npc_ferreiro_bran recebe item_mapa_antigo no diálogo final"
+  ],
+  "rewards": [
+    {"type": "item", "value": "item_lingote_ferro"},
+    {"type": "reputation", "value": "guilda_artesaos_10"}
+  ],
+  "reusable_tags": ["exploration", "item_retrieval", "npc_based"],
+  "design_notes": {
+    "intended_player_experience": "Apresentar exploração com retorno narrativo ao NPC.",
+    "reuse_potential": "A sequência pode ser reutilizada com outros locais e itens.",
+    "integration_notes": "Depende apenas de inventário, diálogo e gatilho de entrada em área."
+  }
+}

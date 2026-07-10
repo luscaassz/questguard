@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: questguard
+Version: 0.1.0
+Summary: Quality-gate architecture for LLM-generated game quests
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.31
+Requires-Dist: jsonschema>=4.21
+Requires-Dist: networkx>=3.2
+Requires-Dist: matplotlib>=3.8

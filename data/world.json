@@ -1,0 +1,32 @@
+{
+  "world_id": "eldoria_demo",
+  "npcs": [
+    {"id": "npc_ferreiro_bran", "name": "Bran", "role": "ferreiro", "location_id": "loc_forja"},
+    {"id": "npc_curandeira_lia", "name": "Lia", "role": "curandeira", "location_id": "loc_praca"},
+    {"id": "npc_explorador_cael", "name": "Cael", "role": "explorador", "location_id": "loc_floresta"}
+  ],
+  "locations": [
+    {"id": "loc_forja", "name": "Forja de Eldoria"},
+    {"id": "loc_praca", "name": "Praça Central"},
+    {"id": "loc_floresta", "name": "Floresta Nebulosa"},
+    {"id": "loc_ruinas", "name": "Ruínas Antigas"}
+  ],
+  "items": [
+    {"id": "item_mapa_antigo", "name": "Mapa Antigo"},
+    {"id": "item_erva_lunar", "name": "Erva Lunar"},
+    {"id": "item_lingote_ferro", "name": "Lingote de Ferro"},
+    {"id": "item_chave_ruinas", "name": "Chave das Ruínas"}
+  ],
+  "factions": [
+    {"id": "faction_guilda_artesaos", "name": "Guilda dos Artesãos"},
+    {"id": "faction_guardioes_floresta", "name": "Guardiões da Floresta"}
+  ],
+  "enemies": [
+    {"id": "enemy_lobo_sombrio", "name": "Lobo Sombrio", "location_id": "loc_floresta"},
+    {"id": "enemy_guardiao_ruinas", "name": "Guardião das Ruínas", "location_id": "loc_ruinas"}
+  ],
+  "objects": [
+    {"id": "object_altar_antigo", "name": "Altar Antigo", "location_id": "loc_ruinas"},
+    {"id": "object_bau_selado", "name": "Baú Selado", "location_id": "loc_ruinas"}
+  ]
+}
